@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+	int printresult = 0;
 	float num1;
 	float num2;
 	float result;
@@ -23,6 +24,7 @@ int main() {
 	else if (op == '/') {
 		if (num2 == 0) {
 			printf("You can't divide by 0\n");
+			printresult = 1;
 		} else {
 			result = num1 / num2;
 		}
@@ -30,6 +32,9 @@ int main() {
 	else {
 		printf("Invalid operator\n");
 	}
+	if (printresult == 0) {
 	printf("Result: %f\n", result);
-	return 0;
+	} else {
+		return 0;
+	}
 }
